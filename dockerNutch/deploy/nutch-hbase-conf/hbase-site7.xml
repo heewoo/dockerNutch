@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+/**
+ * TODO - hbase set
+ * hbase.zookeeper.property.clientPort inject
+ * host -  manager,ubuntu0,ubuntu1,ubuntu2,ubuntu4,ubuntu5
+ * port - Num (2190 ~ 2194)
+ */
+-->
+<configuration>
+        <property>
+                <name>hbase.rootdir</name>
+                <value>hdfs://manager:9000/hbase</value>
+        </property>
+        <property>
+                <name>hbase.zookeeper.quorum</name>
+                <value>manager:2190,ubuntu0:2191,ubuntu1:2192,ubuntu2:2193,ubuntu4:2194,ubuntu5:2195</value>
+        </property>
+        <property>
+                <name>hbase.zookeeper.property.dataDir</name>
+                <value>/usr/lib/hadoop/zk_data</value>
+        </property>
+        <property>
+                <name>hbase.cluster.distributed</name>
+                <value>true</value>
+        </property>
+        <property>
+                <name>hbase.master.info.port</name>
+                <value>60010</value>
+        </property>
+        <property>
+                <name>hbase.master.info.bindAddress</name>
+                <value>manager</value>
+        </property>
+        <property>
+                <name>dfs.support.append</name>
+                <value>true</value>
+        </property>
+        <property>
+                <name>dfs.datanode.max.xcievers</name>
+                <value>4096</value>
+        </property>
+ 
+        <property>
+                <name>hbase.rpc.timeout</name>
+                <value>600000</value>
+        </property>
+
+        <property>
+                <name>zookeeper.session.timeout</name>
+                <value>600000</value>
+        </property>
+
+        <property>
+                <name>hbase.zookeeper.property.clientPort</name>
+                <value>2193</value>
+        </property>
+</configuration>

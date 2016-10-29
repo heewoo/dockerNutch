@@ -25,14 +25,18 @@ RUN apt-get update && \
     apt-get install -y oracle-java8-installer && \
     apt-get install -y ant && \
     apt-get install -y git && \
+    apt-get install -y openssh-server && \
     apt-get clean
 
+# localtime 을 UST 에서 KST(Korea Standard Time)로 변경
+RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
  
 # 기존 미러 서버를 한국 서버로 변경
 RUN sed -i 's/archive.ubuntu.com/ftp.neowiz.com/g' /etc/apt/sources.list
  
 # 최신버전으로 업데이트 후 SSH 및 필요 패키지 설치 
-RUN apt-get update ; apt-get install -y openssh-server aptitude net-tools curl
+#RUN apt-get update
+#RUN apt-get install -y openssh-server
  
 # SSH 관련 설정
 RUN mkdir /var/run/sshd
@@ -40,7 +44,7 @@ RUN sed  -i "/^[^#]*UsePAM/ s/.*/#&/"  /etc/ssh/sshd_config
 RUN echo "UsePAM no" >> /etc/ssh/sshd_config
  
 # Root 비밀번호 설정
-RUN echo 'root:root’ | chpasswd
+#RUN echo 'root:root’ | chpasswd
 
 #host file
 ADD ./hosts /etc/hosts

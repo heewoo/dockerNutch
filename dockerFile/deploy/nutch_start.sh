@@ -8,7 +8,7 @@ echo "############################################"
 echo ">>> inject job"
 /usr/lib/nutch/runtime/local/bin/nutch inject /usr/lib/nutch/runtime/local/urls/ 
 echo ">>>>>> generate job"
-/usr/lib/nutch/runtime/local/bin/nutch generate -Depth2 -topN 500
+/usr/lib/nutch/runtime/local/bin/nutch generate -Depth3 -topN 300
 echo ">>>>>>>>> fetch job"
 /usr/lib/nutch/runtime/local/bin/nutch fetch    -all 
 echo ">>>>>>>>>>>> parse job"
