@@ -6,4 +6,24 @@
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 
-218.48.75.36 manager ubuntu0 ubuntu1 ubuntu2 ubuntu4 ubuntu5
+
+#search
+119.193.96.241  search
+
+#storage
+218.48.75.36    storage
+
+
+
+# Docker - nutch host #
+ 172.17.0.2  nutch1
+ 172.17.0.3  nutch2
+ 172.17.0.4  nutch3
+ 172.17.0.5  nutch4
+ 172.17.0.6  nutch5
+ 172.17.0.7  nutch6
+ 172.17.0.8  nutch7
+ 172.17.0.9  nutch8
+ 172.17.0.10 nutch9
+ 172.17.0.11 nutch10
+
