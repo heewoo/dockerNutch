@@ -9,39 +9,54 @@
  */
 -->
 <configuration>
+
+
         <property>
                 <name>hbase.rootdir</name>
-                <value>hdfs://manager:9000/hbase</value>
+                <value>hdfs://storage:9000/hbase</value>
         </property>
+
         <property>
                 <name>hbase.zookeeper.quorum</name>
-                <value>manager:2190,ubuntu0:2191,ubuntu1:2192,ubuntu2:2193,ubuntu4:2194,ubuntu5:2195</value>
+                <value>storage</value>
         </property>
-        <property>
-                <name>hbase.zookeeper.property.dataDir</name>
-                <value>/usr/lib/hadoop/zk_data</value>
+
+         <property>
+                <name>hbase.zookeeper.property.clientPort</name>
+                <value>2181</value>
         </property>
+
+
         <property>
                 <name>hbase.cluster.distributed</name>
                 <value>true</value>
         </property>
+
+        <property>
+                <name>hbase.zookeeper.property.dataDir</name>
+                <value>/usr/lib/zookeeper</value>
+        </property>
+
         <property>
                 <name>hbase.master.info.port</name>
                 <value>60010</value>
         </property>
+
         <property>
                 <name>hbase.master.info.bindAddress</name>
-                <value>manager</value>
+                <value>storage</value>
         </property>
+
         <property>
                 <name>dfs.support.append</name>
                 <value>true</value>
         </property>
+
         <property>
                 <name>dfs.datanode.max.xcievers</name>
                 <value>4096</value>
         </property>
- 
+
         <property>
                 <name>hbase.rpc.timeout</name>
                 <value>600000</value>
@@ -52,8 +67,20 @@
                 <value>600000</value>
         </property>
 
+
         <property>
-                <name>hbase.zookeeper.property.clientPort</name>
-                <value>2190</value>
+                <name>hbase.regionserver.port</name>
+                <value>60020</value>
         </property>
+
+         <property>
+                <name>hbase.regionserver.handler.count</name>
+                <value>100</value>
+        </property>
+
+         <property>
+                <name>hfile.min.blocksize.size</name>
+                <value>65536</value>
+         </property>
+
 </configuration>
