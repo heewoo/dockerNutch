@@ -3,7 +3,8 @@ echo "############################################"
 echo ">>>>>> NUTCH START"
 echo "############################################"
 
-
+echo ">>> memory clean <<<"
+echo 3 > /proc/sys/vm/drop_caches
 
 echo ">>> inject job"
 /usr/lib/nutch/runtime/local/bin/nutch inject /usr/lib/nutch/runtime/local/urls/ 
