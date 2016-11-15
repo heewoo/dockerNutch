@@ -17,8 +17,8 @@ echo ">>>>>>>>>>>>>>> updatedb job"
 /usr/lib/nutch/runtime/local/bin/nutch updatedb -all 
 echo ">>>>>>>>>>>>>>>>>> index job"
 /usr/lib/nutch/runtime/local/bin/nutch index    -all 
-#echo ">>>>>>>>>>>>>>>>>>>>> clean job"
-#/usr/lib/nutch/runtime/local/bin/nutch clean    -all
+echo ">>>>>>>>>>>>>>>>>>>>> clean job"
+/usr/lib/nutch/runtime/local/bin/nutch clean    -all
 
 
 
