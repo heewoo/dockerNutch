@@ -55,7 +55,13 @@ COPY ./nutch /usr/lib/nutch
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # Nutch git Clone
-RUN git clone git@github.com:heewoo/nutch.git
+WORKDIR /usr/lib
+RUN  git clone https://github.com/heewoo/nutch.git
+
+# nutch init build
+WORKDIR /usr/lib/nutch
+RUN ant runtime
+
  
 # SSH 포트 설정
 # HostOS의 랜덤포트 -> Container 22번 포트를 바라보게 합니다.
