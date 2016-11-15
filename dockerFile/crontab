@@ -1,0 +1,19 @@
+HELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+MAILTO=root
+HOME=/
+
+#0 */2 * * * docker exec nutch1 /usr/lib/deploy/nutch_start.sh
+#* * * * * rm -rf /home/heewoo/test/*
+
+
+0 * * * * docker exec nutch1 /usr/lib/deploy/nutch_start.sh
+5 * * * * docker exec nutch2 /usr/lib/deploy/nutch_start.sh
+10 * * * * docker exec nutch3 /usr/lib/deploy/nutch_start.sh
+15 * * * * docker exec nutch4 /usr/lib/deploy/nutch_start.sh
+25 * * * * docker exec nutch5 /usr/lib/deploy/nutch_start.sh
+30 * * * * docker exec nutch6 /usr/lib/deploy/nutch_start.sh
+35 * * * * docker exec nutch7 /usr/lib/deploy/nutch_start.sh
+40 * * * * docker exec nutch8 /usr/lib/deploy/nutch_start.sh
+45 * * * * docker exec nutch9 /usr/lib/deploy/nutch_start.sh
+50 * * * * docker exec nutch10 /usr/lib/deploy/nutch_start.sh
