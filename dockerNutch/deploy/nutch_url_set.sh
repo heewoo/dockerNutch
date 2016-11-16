@@ -1,10 +1,11 @@
 #!/bin/bash
 
 
-echo "############################################"
-echo "NUTCH - URL SET ALL START"
+
 echo "############################################"
 
+
+scp -r /root/nutch-url/url1/url      nutch1:/usr/lib/nutch/runtime/local/urls/
 scp -r /root/nutch-url/url2/url      nutch2:/usr/lib/nutch/runtime/local/urls/
 scp -r /root/nutch-url/url3/url      nutch3:/usr/lib/nutch/runtime/local/urls/
 scp -r /root/nutch-url/url4/url      nutch4:/usr/lib/nutch/runtime/local/urls/
