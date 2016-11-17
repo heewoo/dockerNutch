@@ -59,8 +59,8 @@ WORKDIR /usr/lib
 RUN  git clone https://github.com/heewoo/nutch.git
 
 # nutch init build
-WORKDIR /usr/lib/nutch
-RUN ant runtime
+# WORKDIR /usr/lib/nutch
+# RUN ant runtime
 
  
 # SSH 포트 설정
