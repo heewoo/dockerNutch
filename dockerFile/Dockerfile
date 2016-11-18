@@ -2,7 +2,7 @@
 # SSH Daemon Service
 # 
 # Images를 선택
-FROM     ubuntu:14.04
+FROM     ubuntu:16.04
  
 MAINTAINER heewoo <heewoo7139@gmail.com>
 
