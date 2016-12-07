@@ -126,5 +126,13 @@
 <pre><code>   $ /root/dockerNutch/dockerNutch/deploy/nutch_host_set.sh
 </code></pre>
 </li>
+
+<li>
+<h2>3. nutch 재실행 (docker, host, crontab restart)</h2>
+<pre><code>   $ /root/dockerNutch/dockerNutch/deploy/nutch-restart.sh
+</code></pre>
+</li>
+
+
 </ul>
 

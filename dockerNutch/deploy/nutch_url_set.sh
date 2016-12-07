@@ -3,6 +3,8 @@
 
 
 echo "############################################"
+echo "NUTCH - URL SET ALL START"
+echo "############################################"
 
 
 scp -r /root/nutch-url/url1/url      nutch1:/usr/lib/nutch/runtime/local/urls/
