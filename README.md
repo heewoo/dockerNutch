@@ -3,7 +3,7 @@
 
  
 <h1>Docker: the container engine</h1>
-<img src="https://github.com/docker/docker/blob/master/docs/static_files/docker-logo-compressed.png">
+<img src="https://www.docker.com/sites/default/files/social/docker_facebook_share.png">
 
 <br>
 
